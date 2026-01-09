@@ -1,0 +1,66 @@
+<!-- HERO -->
+<section class="partners-hero">
+  <div class="overlay">
+    <h1>Our Partners</h1>
+    <p>
+      You can achieve a very impressive effect by using our animated navbar,
+      which is transparent on start, and changes color after the scroll.
+    </p>
+
+    <button (click)="toggleSponsor()">
+      Become a Sponsor
+    </button>
+  </div>
+</section>
+
+<!-- CONDITIONAL MESSAGE -->
+<p class="sponsor-msg" *ngIf="isSponsorOpen">
+  Thank you for your interest in sponsoring our conferences!
+</p>
+
+<!-- TABLE SECTION -->
+<section class="partners-table">
+  <h2>Below are our Corporate Partners</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Trademark</th>
+        <th>Sponsorship</th>
+        <th>Go to Website</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let partner of partners">
+        <td>{{ partner.company }}</td>
+
+        <td>
+          <img
+            [src]="partner.logo"
+            [alt]="partner.company"
+            class="logo"
+          />
+        </td>
+
+        <td>
+          <span
+            [ngClass]="partner.level.toLowerCase()"
+          >
+            {{ partner.level }}
+          </span>
+        </td>
+
+        <td>
+          <a
+            [href]="partner.website"
+            target="_blank"
+          >
+            View website
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,159 @@
+/* --- PARTNERS HERO --- */
+.partners-hero {
+  height: 50vh;
+  min-height: 400px;
+  background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.partners-hero .overlay {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 700px;
+  backdrop-filter: blur(4px);
+}
+
+.partners-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.partners-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.partners-hero button {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.partners-hero button:hover {
+  background-color: #2b6cb0;
+  transform: scale(1.05);
+}
+
+/* --- CONDITIONAL MESSAGE --- */
+.sponsor-msg {
+  background-color: #f0fff4;
+  color: #276749;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #c6f6d5;
+  margin: 20px auto;
+  max-width: 1160px;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* --- TABLE SECTION --- */
+.partners-table {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.partners-table h2 {
+  text-align: center;
+  color: #1a365d;
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+thead {
+  background-color: #1a365d;
+  color: white;
+}
+
+th, td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #edf2f7;
+}
+
+tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+/* Logo Image in Table */
+.logo {
+  height: 40px;
+  width: auto;
+  max-width: 120px;
+  filter: grayscale(100%); /* Keeps it clean/corporate */
+  transition: filter 0.3s;
+}
+
+tr:hover .logo {
+  filter: grayscale(0%);
+}
+
+/* Update the shared styles to include platinum */
+span.platinum, span.gold, span.silver, span.bronze {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* Platinum: Blueish-white metallic look */
+.platinum {
+  background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 100%);
+  color: #2c5282;
+  border: 1px solid #cbd5e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.gold { background: #fefcbf; color: #b7791f; }
+.silver { background: #edf2f7; color: #4a5568; }
+.bronze { background: #fffff0; color: #975a16; border: 1px solid #f6e05e; }
+
+/* Website Link Styling */
+.partners-table a {
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.partners-table a:hover {
+  text-decoration: underline;
+}
+
+/* Animation for the message */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}

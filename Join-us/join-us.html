@@ -1,0 +1,41 @@
+<!-- HERO -->
+<section class="join-hero">
+  <div class="overlay">
+    <h1>Join Our Mailing List!</h1>
+    <p>
+      Join and meet thousands academicians around the globe and stay updated!
+    </p>
+    <button>Click here to JOIN!</button>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="join-form">
+  <h2>Fill the form below:</h2>
+
+  <div class="form-row">
+    <label>Firstname:</label>
+    <input type="text" [(ngModel)]="firstName">
+  </div>
+
+  <div class="form-row">
+    <label>Lastname:</label>
+    <input type="text" [(ngModel)]="lastName">
+  </div>
+
+  <p><strong>Fullname:</strong> {{ fullName }}</p>
+
+  <div class="form-row">
+    <label>Enter Email Address:</label>
+    <input type="email" [(ngModel)]="email">
+  </div>
+
+  <p><strong>Email:</strong> {{ email }}</p>
+
+  <div class="form-row">
+    <label>Enter Institution/Affiliation:</label>
+    <input type="text" [(ngModel)]="institution">
+  </div>
+
+  <p><strong>Academic Institution:</strong> {{ institution }}</p>
+</section>

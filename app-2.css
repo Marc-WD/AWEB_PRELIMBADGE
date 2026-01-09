@@ -1,0 +1,65 @@
+/* --- NAVBAR --- */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1rem 0;
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+  color: #1a365d;
+}
+
+/* --- ACTIVE LINK STATE --- */
+.navbar a.active {
+  color: #2b6cb0;
+  font-weight: 700;
+}
+
+.navbar a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2b6cb0;
+  border-radius: 2px;
+}
+
+/* Responsive: Stack links on mobile */
+@media (max-width: 600px) {
+  .navbar-container {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar a {
+    font-size: 0.8rem;
+  }
+}
